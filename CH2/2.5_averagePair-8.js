@@ -1,5 +1,7 @@
+// 尋找在已知的arr中平均值為arv的組合
 averagePair([-11, 0, 1, 2, 3, 9, 14, 17, 21], 1.5);
 
+// 方法一
 function averagePair(arr, avg) {
   let result = [];
   for (let i = 0; i < arr.length - 1; i++) {

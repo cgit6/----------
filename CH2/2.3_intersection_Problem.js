@@ -1,4 +1,4 @@
-
+// 交集的問題，判斷某兩陣列是否有重複
 function intersect(arr1, arr2) {
     let result = [];
     for (let i = 0; i < arr1.length; i++) {
@@ -22,10 +22,12 @@ console.log(inters);
 // 對所有元素出現頻率的紀錄出現超過一次的次數代表有重複
 // 新問題:如果第二次出現的時候在同一個arrary 中?
 function intersect2(arr1, arr2) {
+    // 宣告 result 為重複出現元素的陣列
     let result = [];
     let arr3 = arr1.concat(arr2);
     let counter = {};
 
+    // 紀錄每個元素出現的頻率
     for (let i = 0; i < arr3.length; i++){
         if (!counter[arr3[i]]) {
             counter[arr3[i]] = 1;
@@ -33,6 +35,7 @@ function intersect2(arr1, arr2) {
             counter[arr3[i]]++;
         }
     }
+    // 檢視元素出現的頻率，若大於2 則交集
     for (let property in counter) {
         if (counter[property]>=2) {
             result.push(Number(property));

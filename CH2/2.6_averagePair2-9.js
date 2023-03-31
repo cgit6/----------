@@ -1,6 +1,8 @@
-averagePair([-11, 0, 1, 2, 3, 9, 14, 17, 21], 1.5);
+averagePair2([-11, 0, 1, 2, 3, 9, 14, 17, 21], 1.5);
 
-function averagePair(arr, avg) {
+// 方法二
+function averagePair2(arr, avg) {
+  // 初始位置: left 與 right 
   let left = 0;
   let right = arr.length - 1;
   let result = [];
@@ -21,3 +23,5 @@ function averagePair(arr, avg) {
   console.log(result);
   return result;
 }
+
+// O(N)
