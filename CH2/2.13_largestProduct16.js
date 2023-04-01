@@ -1001,22 +1001,27 @@ let thousandDigits = [
   0,
 ];
 
+// 
 function largestProduct(n) {
+  // 初始化參數
   let currentProduct;
   let maxProduct = -Infinity;
-  let left = 0;
-  let right = n - 1;
-
-  while (right < thousandDigits.length) {
+  let start_pointer = 0;
+  let end_pointer = n - 1;
+  // 迭代階段
+  while (end_pointer < thousandDigits.length) {
+    // 當前最佳解
     currentProduct = 1;
-    for (let i = left; i <= right; i++) {
+    for (let i = start_pointer; i <= start_pointer; i++) {
+      // 產生一個初始解
       currentProduct *= thousandDigits[i];
     }
+    // 比較好接受
     if (currentProduct > maxProduct) {
       maxProduct = currentProduct;
     }
-    right++;
-    left++;
+    start_pointer++;
+    end_pointer++;
   }
 
   console.log(maxProduct);
